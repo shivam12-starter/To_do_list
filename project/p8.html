@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Do List</title>
+    <link rel="stylesheet" href="p8.css" />
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+SC:ital,wght@0,100..900;1,100..900&family=Syne+Mono&display=swap');
+    </style>
+    <link rel="icon" type="image/x-icon" href="image (1).png" />
+  </head>
+
+  <body>
+    <h1>To Do List</h1>
+    <h3>You can add your task here at no cost</h3>
+
+    <!-- Task list -->
+    <div class="taskcontainer">
+      <ul id="tasks" class="tasks">
+        <li class="tasknames">
+          <input type="checkbox" class="check" placeholder="Checkbox" />
+          <div class="tassk">
+            <label class="taskname">A Sample task</label>
+          </div>
+          <button class="edit" type="button" aria-label="Edit Task">
+            <img src="edit_note_24dp_E3E3E3B_FILL0_wght400_GRAD0_opsz24.svg" alt="edit" height="25" width="25" />
+          </button>
+          <button class="delete" type="button" aria-label="Delete Task">
+            <img src="delete_sweep_24dp_E3E3E_FILL0_wght400_GRAD0_opsz24.svg" alt="delete" height="25" width="25" />
+          </button>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Ongoing and completed tasks display -->
+    <div id="container">
+      <div id="ongoingtask">
+        <span id="ot">Ongoing Tasks</span>
+        <div id="ongoing">A sample task</div>
+      </div>
+      <div id="completedtask">
+        <span id="ct">Completed Tasks</span>
+        <div id="completed">A sample task</div>
+      </div>
+    </div>
+
+    <!-- Add Task Dialog -->
+    <div class="taskaddcontainer">
+      <dialog id="newtaskdialog">
+        <div class="dialog-content">
+          <p>Add Your Task To Do Here:</p>
+          <input type="text" id="task" placeholder="Add Your Task" minlength="1" maxlength="50" required />
+          <br />
+          <button id="add" type="button">Add</button>
+          <button id="close" type="button">&times;</button>
+        </div>
+      </dialog>
+
+      <button id="addlist" type="button" aria-label="Add New Task">
+        <img src="note_stack_add_24dp_FDF3D0_FILL0_wght400_GRAD0_opsz24.svg" alt="add" height="25" width="25" />
+      </button>
+    </div>
+
+    <!-- Edit Task Dialog -->
+    <dialog id="editbox">
+      <div class="edits">
+      <input type="text" id="editname" placeholder="Edit task" minlength="1" maxlength="50" required /><br><br>
+      <button id="save" type="button">Save</button><br><br>
+      <button id="cancel" type="button">Cancel</button>
+      </div>
+    </dialog>
+
+    <!-- Footer -->
+    <footer>
+      <span class="names">
+        <img alt="Logo" height="40" width="40" src="image (1).png" id="icon" />
+        &copy; Add Task List Limited. All Rights Reserved @2025
+      </span>
+    </footer>
+<script src="p8.js"></script>
+  </body>
+</html>
